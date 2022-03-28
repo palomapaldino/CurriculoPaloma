@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+}
+
+.container{
+    background-color: azure;
+}
+
+#header{
+    background-color: aquamarine;
+    height: 250px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto {
+    border-radius: 50%;
+    margin: 30px;
+}
+
+.textos {
+    display: block;
+    margin-top: 35px;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    color: black;
+    font-family: 'Syne Mono' , monospace;
+}
+.cargo {
+    font-family: 'Pacifico' , cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blueviolet;
+
+}
+.menu ul{
+    height: 50px;
+    background-color: blanchedalmond;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    }
+        .menu ul li{
+            display: inline;
+        }
+
+        .menu ul li a{
+            padding: 5px 10px;
+            display: inline-block;
+
+            background-color: blue;
+            color: cornsilk;
+            text-decoration: none;
+            border-bottom: 3px solid chocolate;
+            font-size: 20px;
+
+        }
+        .menu ul li a:hover{
+            color: blueviolet;
+            background-color: chartreuse;
+            border-bottom: 3px solid yellow;
+        }
+    
+    #main{
+        height: 400px;
+        background-color: violet;
+        display: block;
+        position: relative;
+        max-width: 600px;
+        margin: auto;
+    }
+
+        #main p{
+            margin-top: 30px;
+            max-width: 600px;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+
+        }
+    .footer{
+        height: 100px;
+        background-color: tomato;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-family: 'Pacifico', cursive;
+        }
