@@ -61,22 +61,22 @@
             padding: 5px 10px;
             display: inline-block;
 
-            background-color: blue;
-            color: cornsilk;
+            background-color: rgb(33, 7, 94);
+            color: rgb(220, 255, 228);
             text-decoration: none;
-            border-bottom: 3px solid chocolate;
+            border-bottom: 3px solid rgb(138, 30, 210);
             font-size: 20px;
 
         }
         .menu ul li a:hover{
-            color: blueviolet;
-            background-color: chartreuse;
-            border-bottom: 3px solid yellow;
+            color: rgb(43, 226, 113);
+            background-color: rgb(255, 238, 0);
+            border-bottom: 3px solid rgb(0, 204, 255);
         }
     
     #main{
         height: 400px;
-        background-color: violet;
+        background-color: rgb(255, 255, 255);
         display: block;
         position: relative;
         max-width: 600px;
@@ -92,7 +92,7 @@
         }
     .footer{
         height: 100px;
-        background-color: tomato;
+        background-color: rgb(238, 238, 238);
         display: flex;
         align-items: center;
         justify-content: center;
