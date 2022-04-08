@@ -7,6 +7,7 @@
 
 #cartela table {
     border: 1px solid black;
+    margin: 10px;
 }
 
 #cartela thead tr {
@@ -22,4 +23,36 @@
     width: 75px;
     text-align: center;
     border: 1px solid black;
+}
+
+
+#cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cabecalho button{
+    margin: 10px;
+    background-color: aquamarine;
+    width: 200px;
+    height: 60px;
+    font-family: 'Syne Mono' , ;
+    font-size: 20px;
+}
+#sorteados {
+    text-align: center;
+    max-width: 400px;
+}
+
+#sorteados span {
+    font-size: 30px;
+    background-color: aquamarine;
+    padding: 2px;
+    margin: 3px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 50%;
 }
