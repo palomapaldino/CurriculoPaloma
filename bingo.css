@@ -37,12 +37,15 @@
     background-color: aquamarine;
     width: 200px;
     height: 60px;
-    font-family: 'Syne Mono' , ;
+    font-family: 'Syne Mono', monospace;
     font-size: 20px;
 }
 #sorteados {
+    display: flex;
     text-align: center;
-    max-width: 400px;
+    justify-content: center;
+    flex-wrap: wrap; 
+    max-width: 800px;
 }
 
 #sorteados span {
@@ -52,7 +55,9 @@
     margin: 3px;
     width: 40px;
     height: 40px;
+    display: flex;
     text-align: center;
+    justify-content: center;
     border: 1px solid black;
     border-radius: 50%;
 }
