@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #cartela table {
@@ -40,27 +41,22 @@
     font-family: 'Syne Mono', monospace;
     font-size: 20px;
 }
+
 #sorteados {
     display: flex;
-    max-width: 400px;
-    display: flex;
-    text-align: center;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap; 
-    max-width: 800px;
 }
 
 #sorteados span {
     font-size: 30px;
+    text-align: center;
     background-color: aquamarine;
     padding: 2px;
-    margin: 3px;
-    width: 40px;
     height: 40px;
-    padding: 10px;
     margin: 5px;
     width: 50px;
-    text-align: center;
     border: 1px solid black;
     border-radius: 50%;
 }

@@ -3,7 +3,7 @@
 }
 
 :root{
-    --principal: bisque;
+    --principal: white;
     --secundaria: #363612;
 }
 
@@ -55,7 +55,7 @@ body{
 }
 .menu ul{
     height: 50px;
-    background-color: blanchedalmond;
+    background-color: white;
     padding: 0px;
     margin: 0px;
     list-style: none;
@@ -85,16 +85,16 @@ body{
             border-bottom: 3px solid rgb(0, 204, 255);
         }
     
-    #main{
-        height: 400px;
-        background-color: rgb(255, 255, 255);
+    .main{
+        height: 100%;
+        background-color: white;
         display: block;
         position: relative;
-        max-width: 600px;
+        max-width: 1200px;
         margin: auto;
     }
 
-        #main p{
+        .main p{
             margin-top: 30px;
             max-width: 600px;
             text-align: center;
@@ -103,7 +103,7 @@ body{
         }
     .footer{
         height: 100px;
-        background-color: rgb(238, 238, 238);
+        background-color: white;
         display: flex;
         align-items: center;
         justify-content: center;
