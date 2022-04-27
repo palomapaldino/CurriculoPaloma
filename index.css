@@ -2,14 +2,25 @@
     margin: 0px;
 }
 
+:root{
+    --principal: bisque;
+    --secundaria: #363612;
+}
+
+body{
+    background-color: var(--principal);
+}
+
 .container{
-    background-color: azure;
+    background-color: var(--principal);
 }
 
 #header{
-    background-color: aquamarine;
     height: 250px;
-    text-align: center;
+    width: 100%;
+    text-align: left;
+    background: url("https://nova-escola-producao.s3.amazonaws.com/EBUupJuWp5ttKkmKf5PZXN2rdxsMJ376JtzZaTE7MQRdbWVNrt5CsVgFGaDK/gettyimages-663622960.jpg");
+    background-size: cover;
     position: relative;
     display: flex;
     align-items: center;

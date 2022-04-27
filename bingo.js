@@ -85,14 +85,20 @@ function gerarCartelaBingo() {
     area_cartela.appendChild(divCartela);
 }
 
+var jogoEstaAcontecendo = false;
+
 function deletarCartelas() {
+
+    if(jogoEstaAcontecendo){
+        alert("Você não pode limpar as  cartelas enquanto o jogo está acontecendo!");
+        return;
+    }
 
     let divCartela = document.getElementById("cartela");
     let divSorteio = document.getElementById("sorteados");
     let cartela = divCartela.getElementsByTagName("table");
     let h3dono = divCartela.getElementsByTagName("h3");
     let spans = divSorteio.getElementsByTagName("span");
-    let numerosCartela = divSorteio.getElementsByTagName("td")
     
     while(cartela[0]){
         cartela[0].parentNode.removeChild(cartela[0]);
@@ -103,10 +109,12 @@ function deletarCartelas() {
     while(spans[0]){
         spans[0].parentNode.removeChild(spans[0]);
     }
-    while(numerosCartela[0]){
-        numerosCartela[0].parentNode.removeChild(numerosCartela[0]);
-    }
 }
+
+
+
+
+var intervalo;
 
 function sorteio() {
 
@@ -122,6 +130,8 @@ function sorteio() {
     let numerosSorteados = []
 
     let intervalo = setInterval(function () {
+        jogoEstaAcontecendo = true;
+        intervalo = true
         let aleatorio = 0;
         do {
             aleatorio = Math.ceil(Math.random() * 75);
@@ -143,6 +153,7 @@ function sorteio() {
             if (verificarVencedor(numerosCartela, numerosSorteados)) {
                 alert("Parabéns! Você ganhou o bingo!");
                 clearInterval(intervalo);
+                jogoEstaAcontecendo = false
             }
         }
 
@@ -150,6 +161,15 @@ function sorteio() {
         if (numerosSorteados.length === 75) clearInterval(intervalo);
     }, 200)
 
+}
+
+function paraJogo(){
+    if(jogoEstaAcontecendo){
+        clearInterval(intervalo);
+        jogoEstaAcontecendo = false;
+    }else{
+        alert("Não existe nenhum jogo acontecendo!")
+    }
 }
 
 function verificarVencedor(cartela, numerosSorteados) {
