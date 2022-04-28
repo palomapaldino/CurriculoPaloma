@@ -23,6 +23,14 @@ function gerarNumerosAleatorios(quantidade, min, max) {
 function gerarCartelaBingo() {
 
     let dono = prompt("digite o nome do dono da cartela:");
+
+    console.log(dono);
+
+    if (dono == null){
+    alert("Você precisa digitar um nome!");
+    return;
+}
+
     let h3dono = document.createElement("h3");
     h3dono.innerText = dono;
 
@@ -93,12 +101,16 @@ function deletarCartelas() {
         alert("Você não pode limpar as  cartelas enquanto o jogo está acontecendo!");
         return;
     }
+    numeroCartelas = 0;
+    jogosEstaAcontecendo = false
 
     let divCartela = document.getElementById("cartela");
     let divSorteio = document.getElementById("sorteados");
     let cartela = divCartela.getElementsByTagName("table");
     let h3dono = divCartela.getElementsByTagName("h3");
     let spans = divSorteio.getElementsByTagName("span");
+    
+    let divPerdida = divCartela.getElementsByTagName ("div")
     
     while(cartela[0]){
         cartela[0].parentNode.removeChild(cartela[0]);
@@ -109,6 +121,10 @@ function deletarCartelas() {
     while(spans[0]){
         spans[0].parentNode.removeChild(spans[0]);
     }
+
+    while(divPerdida[0]){
+        divPerdida[0].parentNode.removeChild(divPerdida[0]);
+    }
 }
 
 
@@ -118,7 +134,8 @@ var intervalo;
 
 function sorteio() {
 
-    let cartelas = document.getElementsByTagName("table");
+    let divCartela = document.getElementById("cartela");
+    let cartelas = divCartela.getElementsByTagName("div");
 
     if (cartelas.length === 0) {
         alert("Você precisa criar uma cartela antes!");
@@ -131,7 +148,6 @@ function sorteio() {
 
     let intervalo = setInterval(function () {
         jogoEstaAcontecendo = true;
-        intervalo = true
         let aleatorio = 0;
         do {
             aleatorio = Math.ceil(Math.random() * 75);
@@ -143,6 +159,7 @@ function sorteio() {
         divsorteados.appendChild(numero);
         //Conferir as cartelas
         for (let i = 0; i < cartelas.length; i++) {
+            let nomeJogador = cartelas[i].getElementsByTagName("h3")[0].innerText;
             let numerosCartela = cartelas[i].getElementsByTagName("td");
             for (let j = 0; j < numerosCartela.length; j++) {
                 if (numerosCartela[j].innerText == aleatorio) {
@@ -151,7 +168,7 @@ function sorteio() {
             }
 
             if (verificarVencedor(numerosCartela, numerosSorteados)) {
-                alert("Parabéns! Você ganhou o bingo!");
+                alert(`Parabéns ${nomeJogador}! Você ganhou o bingo!`);
                 clearInterval(intervalo);
                 jogoEstaAcontecendo = false
             }
